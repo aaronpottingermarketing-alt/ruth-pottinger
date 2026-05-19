@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const credentials = [
   { abbr: "ND", full: "Naturopathic Doctor" },
   { abbr: "NAET", full: "NAET Practitioner Certification" },
@@ -12,25 +14,17 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: portrait placeholder + credentials */}
           <div className="space-y-8">
-            {/* Portrait area */}
+            {/* Portrait */}
             <div className="relative">
-              <div className="w-full aspect-[3/4] max-w-sm mx-auto lg:mx-0 bg-gradient-to-br from-[#8BAF7C]/30 to-[#4A6741]/20 rounded-2xl flex items-center justify-center">
-                <div className="text-center text-[#4A6741]/50">
-                  <svg
-                    className="w-24 h-24 mx-auto mb-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                  <p className="text-sm">Photo of Ruth</p>
-                </div>
+              <div className="w-full max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden aspect-[3/4] relative">
+                <Image
+                  src="/ruth.jpg"
+                  alt="Ruth Pottinger — Naturopath & NAET Practitioner"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                  priority
+                />
               </div>
               {/* Decorative accent */}
               <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full border-2 border-[#C4A882]/30 hidden lg:block" />
