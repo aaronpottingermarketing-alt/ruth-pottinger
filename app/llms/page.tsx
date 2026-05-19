@@ -1,0 +1,36 @@
+export const dynamic = "force-static";
+
+const content = `# Ruth Pottinger — Naturopath & NAET Practitioner
+
+> Ruth Pottinger is a qualified Naturopath, Homeopath, and NAET practitioner based in West Wickham, Bromley, Kent. She specialises in allergy elimination, food intolerance testing and treatment, and natural approaches to rebalancing the body. Trained at the College of Naturopathic Medicine, London (4-year programme). Qualifications: ND, NAET Practitioner, Dip Hom. Offers a free 30-minute Health Review for new clients.
+
+## Services
+- NAET Allergy Elimination Therapy — non-invasive, drug-free, treats one allergen per session
+- Naturopathic Consultation — nutrition, homeopathy, iridology
+- Allergy & Intolerance Testing — muscle response testing
+- Free 30-Minute Health Review
+
+## Location
+West Wickham, Bromley, Kent, England
+
+## Contact
+Phone: 07961 566058
+Facebook: https://www.facebook.com/ruthpottingernaturopath/
+Instagram: https://www.instagram.com/ruth_pottinger_naturopath/`;
+
+export default function LlmsPage() {
+  return (
+    <pre
+      style={{
+        fontFamily: "monospace",
+        whiteSpace: "pre-wrap",
+        padding: "2rem",
+        background: "#fff",
+        color: "#2C2C2A",
+        lineHeight: 1.7,
+      }}
+    >
+      {content}
+    </pre>
+  );
+}
